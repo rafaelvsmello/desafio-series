@@ -26,15 +26,20 @@ namespace DioSeries.Entities
             Excluido = true;
         }
 
-        public string RetornaTitulo()
+        public string RetornarTitulo()
         {
             return Titulo;
         }
 
-        public int GetId()
+        public int RetornarId()
         {
             return Id;
-        }        
+        }      
+        
+        public bool RetornarExcluido()
+        {
+            return Excluido;
+        }
 
         public override string ToString()
         {
@@ -42,7 +47,8 @@ namespace DioSeries.Entities
             retorno += $"Gênero: {Genero}" + Environment.NewLine;
             retorno += $"Título: {Titulo}" + Environment.NewLine;
             retorno += $"Descrição: {Descricao}" + Environment.NewLine;
-            retorno += $"Ano de Lançamento: {Ano}";
+            retorno += $"Ano de Lançamento: {Ano}" + Environment.NewLine;
+            retorno += $"Excluído: {Excluido}";
 
             return retorno;
         }
